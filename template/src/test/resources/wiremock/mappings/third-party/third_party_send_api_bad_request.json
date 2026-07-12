@@ -1,0 +1,19 @@
+{
+  "id": "c55b08ae-113b-4010-ae4b-6cf1c393bfe4",
+  "request": {
+    "method": "POST",
+    "url": "/send",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"messageBodies\":[\"Test message\"],\"recipientNumbers\":[\"invalid-number\"],\"userTag\":\"test-tag\",\"senderNumber\":\"500030005711\"}",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response": {
+    "status": 406,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"message\":\"invalid input\", \"result\":[-1]}"
+  }
+}

@@ -1,0 +1,14 @@
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+	<include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+	<!-- The OpenTelemetry appender -->
+	<appender name="OTEL" class="io.opentelemetry.instrumentation.logback.appender.v1_0.OpenTelemetryAppender">
+		<captureMdcAttributes>true</captureMdcAttributes>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="OTEL"/>
+		<appender-ref ref="CONSOLE"/>
+	</root>
+</configuration>
