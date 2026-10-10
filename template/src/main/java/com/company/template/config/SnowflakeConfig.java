@@ -16,7 +16,7 @@ public class SnowflakeConfig {
 
 	private final Environment environment;
 
-    @Value("${spring.application.name}")
+	@Value("${spring.application.name}")
 	private String HOSTNAME;
 
 	@Bean

@@ -15,9 +15,9 @@ public class JsonConfig {
 	@Bean
 	public ObjectMapper objectMapper() {
 		JsonMapper jsonMapper = new JsonMapper();
-        jsonMapper.registerModule(new JavaTimeModule());
-        jsonMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        jsonMapper.setDefaultPropertyInclusion(JsonInclude.Include.NON_NULL);
+		jsonMapper.registerModule(new JavaTimeModule());
+		jsonMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+		jsonMapper.setDefaultPropertyInclusion(JsonInclude.Include.NON_NULL);
 		return jsonMapper;
 	}
 

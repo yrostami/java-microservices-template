@@ -28,7 +28,7 @@ public class DummyEventListener {
 
 	private final DummyEventListenerBeanMapper mapper;
 
-    // Todo: change the retry policy. configure retry for listener container factory
+	// Todo: change the retry policy. configure retry for listener container factory
 	@RetryableTopic(include = { Exception.class }, attempts = "1", backOff = @BackOff(delay = 500, multiplier = 2),
 			topicSuffixingStrategy = TopicSuffixingStrategy.SUFFIX_WITH_INDEX_VALUE,
 			dltTopicSuffix = "-dlt-${spring.application.name}", retryTopicSuffix = "-retry-${spring.application.name}")
